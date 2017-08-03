@@ -1,0 +1,162 @@
+body{
+	font-family: seouil;
+}
+@font-face{
+	font-family: seouil;
+	src: url('../font/seouil.otf');
+	src: url('../font/seouil.ttf');
+	src: url('../font/seouil.woff');
+}
+/*Yellow portion styling*/
+.landing{
+	width: 100%;
+	height: 100%;
+	background: rgb(255,235,60);
+}
+.logo{
+	width: 70px;
+}
+
+/*menu items styling*/
+.menu{
+	float: right;
+    list-style: none;
+    padding-top: 15px;
+}
+.menu li{
+	display: inline-block;
+	margin-left: 10px;
+}
+.menu li a{
+	color: rgb(0,0,0);
+	text-decoration: none;
+	font-weight: bold;
+}
+.menu li a:hover{
+	text-decoration: none;
+}
+.menu li .gotoApp{
+	background: black;
+	padding: 5px 5px;
+	color: rgb(255,235,60);
+}
+
+/*styling of text below logo*/
+.cmd{
+	padding-top: 40px;
+	font-weight: normal;
+}
+.lineBelowCmd{
+	padding-bottom: 70px;
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+
+/*styling central white portiom*/
+.main-page{
+	background: rgb(230,230,230);
+}
+.main-page-container{
+	width: 80%;
+	background: white;
+	margin-left: auto;
+	margin-right: auto;
+	top: -30px;
+	position: relative;
+	border-radius: 5px;
+	padding-bottom: 50px;
+}
+@media screen and (max-width: 640px){
+	.main-page-container{
+		width: 100%;
+	}
+}
+.top-line{
+	width: 100%;
+	height: 6px;
+	background: rgb(153,153,153);
+	margin-bottom: 40px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.content{
+	font-size: 22px;
+	padding-left: 35px;
+	font-weight: bold;
+	color: rgb(69,69,69);
+}
+.sub-content{
+	margin-left: 12px;
+}
+@media screen and (max-width: 640px){
+	.content{
+		font-size: 16px;
+		padding-left: 10px;
+	}
+}
+/*selection box styling*/
+.select-option{
+	max-width: 35%;
+	margin-top: -10px;
+	margin-left: 52px;
+	font-weight: bold;
+	color: rgb(69,69,69);
+}
+@media screen and (max-width:640px){
+	.select-option{
+		margin-left: 25px;
+	}
+}
+/*input box styling*/
+.input-line{
+	font-weight: bold;
+	text-align: left;	
+	padding-left: 5px;
+	margin-bottom: 0px !important;
+	color: rgb(69,69,69);
+}
+.leftMargin{
+	margin-left: 52px !important;
+}
+@media screen and (max-width:640px){
+	.leftMargin{
+	margin-left: 25px !important;
+    }
+}
+
+/*checking & zoning table*/
+.cztable{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	color: rgb(69,69,69);
+}
+
+/*middle headings*/
+.mid-heads{
+	text-align: left;
+	padding-top: 18px;
+	padding-bottom: 2px;
+	padding-left: 35px;
+	font-weight: bold;
+	color: #00bcd4;
+}
+@media screen and (max-width: 640px){
+	.mid-heads{
+		padding-left: 10px;
+	}
+}
+
+/*calculate button styling*/
+.customBtn{
+	text-align: center;
+	margin-top: 50px;
+}
+.myBtn{
+	color: rgb(69,69,69);
+	background: rgb(255,235,60);
+	font-weight: bold;
+}
+.myBtn:hover{
+	background: rgba(255,235,60,0.7);
+}

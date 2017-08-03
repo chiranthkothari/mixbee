@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="assets/css/material.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>MixBee- Online Concrete Mix design calculator</title>
+</head>
+<body>
+	<div id="main-container">
+		<div class="landing">
+			<div class="container">
+				<a href="#"><img src="assets/img/logo.png" class="logo"></a>
+				<ul class="menu">
+					<li>
+						<a href="#">HOME</a>
+					</li>
+					<li>
+						<a href="#">ABOUT</a>
+					</li>
+					<li>
+						<a href="#">CONTACT</a>
+					</li>
+				</ul>
+				<h4 class="cmd">CONCRETE MIX DESIGN</h4>
+				<h6 class="lineBelowCmd">(As per IS 10262-2009)</h6>
+			</div>
+		</div>
+		<div class="main-page">
+			<div class="container">
+				<div class="main-page-container">
+					<div class="top-line"></div>
+					<p class="content">1. Grade of Concrete</p>
+					<select class="select-option">
+						<option value="">M10</option>
+						<option value="">M15</option>
+						<option value="">M20</option>
+						<option value="">M25</option>
+						<option value="">M30</option>
+						<option value="">M35</option>
+						<option value="">M40</option>
+					</select>
+					<p class="content">2. Type of cement</p>
+					<select class="select-option">
+						<option value="">PPC</option>
+						<option value="">33</option>
+						<option value="">43</option>
+						<option value="">53</option>
+					</select>
+					<p class="content">3. Maximum nominal size of aggregates</p>
+					<select class="select-option">
+						<option value="">10 mm</option>
+						<option value="">20 mm</option>
+						<option value="">40 mm</option>
+					</select>
+					<p class="content">4. Second size of aggregates</p>
+					<select class="select-option">
+						<option value="">10 mm</option>
+						<option value="">12.5 mm</option>
+						<option value="">20 mm</option>
+						<option value="">40 mm</option>
+					</select>
+					<p class="content">5. Second size : Max. nominal size (Ratio)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin"><input type="text" name="sec_ratio" placeholder="Enter value" class="input-line">
+						</div>
+						<div class="col s1">
+						   <p style="font-weight: bolder;">:</p>
+						</div>
+						<div class="col l2 s4"><input type="text" name="max_ratio" placeholder="Enter value" class="input-line"></div>
+					</div>
+					<p class="content">6. Workability (mm)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">7. Type of concrete</p>
+					<select class="select-option">
+						<option value="">RCC</option>
+						<option value="">PCC</option>
+					</select>
+					<p class="content">8. Exposure condition</p>
+					<select class="select-option">
+						<option value="">Mild</option>
+						<option value="">Moderate</option>
+						<option value="">Severe</option>
+						<option value="">Very severe</option>
+						<option value="">Extreme</option>
+					</select>
+					<p class="content">8. Method of placing concrete</p>
+					<select class="select-option">
+						<option value="">Pumping</option>
+						<option value="">Automatic</option>
+					</select>
+					<p class="content">9. Degree of supervision</p>
+					<select class="select-option">
+						<option value="">Good</option>
+						<option value="">Normal</option>
+					</select>
+					<p class="content">10. Type of coarse aggregates</p>
+					<select class="select-option">
+						<option value="">Angular</option>
+						<option value="">Sub-angular</option>
+						<option value="">Gravel with crushed particles</option>
+						<option value="">Rounded gravel</option>
+					</select>
+					<p class="content">11. Use fly ash</p>
+					<select class="select-option">
+						<option value="">Yes</option>
+						<option value="">No</option>
+					</select>
+					<p class="content sub-content">Percentage increase in cementous material</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content sub-content">Percentage of fly ash (by cement)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">12. Chemical admixture</p>
+					<select class="select-option">
+						<option value="">Yes</option>
+						<option value="">No</option>
+					</select>
+					<p class="content sub-content">Chemical admixture type</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content sub-content">Chemical admixture make</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content sub-content">Percentage reduction in water content</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content sub-content">Volume of chemical admixture (Percentage)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content sub-content">Specific gravity of chemical  admixture</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">13. Checking and Zoning</p>
+					<table class="responsive-table striped cztable">
+					   <thead>
+					   	 <tr>
+					   	 	<th>IS Sieve</th>
+					   	 	<th>% passing</th>
+					   	 	<th>Zone 1</th>
+					   	 	<th>Zone 2</th>
+					   	 	<th>Zone 3</th>
+					   	 	<th>Zone 4</th>
+					   	 </tr>
+					   </thead>
+					   <tbody>
+					   	 <tr>
+					   	 	<th>10mm</th>
+					   	 	<th>100</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 </tr>
+					   	 <tr>
+					   	 	<th>4.75mm</th>
+					   	 	<th>95</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 </tr>
+					   	 <tr>
+					   	 	<th>2.36mm</th>
+					   	 	<th>65</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 </tr>
+					   	 <tr>
+					   	 	<th>1.18mm</th>
+					   	 	<th>45</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 </tr>
+					   	 <tr>
+					   	 	<th>600&micro;</th>
+					   	 	<th>32</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 </tr>
+					   	 <tr>
+					   	 	<th>300&micro;</th>
+					   	 	<th>15</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 </tr>
+					   	 <tr>
+					   	 	<th>150&micro;</th>
+					   	 	<th>08</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 	<th>OK</th>
+					   	 </tr>
+					   </tbody>
+					</table>
+					<h6 class="mid-heads">Experimental Values</h6>
+					<p class="content">14. Specific gravity of cement</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">15. Specific gravity of fine aggregates</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">16. Specific gravity of coarse aggregates</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">17. Water absorption of Fine Aggregates</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">18. Water absorption of Coarse Aggregates</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">19. Free surface moisture (%)- Fine Aggregate</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">20. Free surface moisture (%)- Coarse Aggregate</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<h6 class="mid-heads">Target strength and water-cement ratio selection</h6>
+					<p class="content">21. Considered Standard Deviation</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">22. Target avg. compressive strength at 28 days</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">23. Maximum water content</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">24. Adopt water cement ratio</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<h6 class="mid-heads">Water content calculation</h6>
+					<p class="content">25. Maximum water content (kg/m<sup>3</sup>)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">26. Reduction due to type of coarse aggregates (kg/m<sup>3</sup>)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">27. Increament due to workability (kg/m<sup>3</sup>)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">28. Net water content (kg/m<sup>3</sup>)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">29. Resulting WC after Reduction due to admixture (kg/m<sup>3</sup>)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<h6 class="mid-heads">Cement content calculation</h6>
+                    <p class="content">30. Total Cementitious material content (kg/m<sup>3</sup>)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">31. Minimum Cement content as per IS 456 (kg/m<sup>3</sup>)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">32. Cement content (kg/m<sup>3</sup>)</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">33. Volume of CA per unit total aggregates</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">34. Volume change due to workability</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">35. Max. reduction in CA (%) due to pumpable concrete</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">36. Volume of coarse aggregates</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<p class="content">35. Volume of fine aggregates</p>
+					<div class="row" style="margin-top: -10px;">
+						<div class="col l2 s4 leftMargin">
+							<input type="text" placeholder="Enter value" class="input-line">
+						</div>
+					</div>
+					<div class="customBtn">
+						<a class="waves-effect waves-light btn myBtn">CALCULATE</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/materialize.min.js"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>
