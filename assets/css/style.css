@@ -1,5 +1,6 @@
 body{
-	font-family: seouil;
+	/*font-family: seouil;*/
+	font-family: 'Source Sans Pro', sans-serif;
 }
 @font-face{
 	font-family: seouil;
@@ -44,11 +45,9 @@ body{
 /*styling of text below logo*/
 .cmd{
 	padding-top: 40px;
-	font-weight: normal;
 }
 .lineBelowCmd{
 	padding-bottom: 70px;
-	font-weight: normal;
 	margin-bottom: 0px;
 }
 
@@ -82,7 +81,6 @@ body{
 .content{
 	font-size: 22px;
 	padding-left: 35px;
-	font-weight: bold;
 	color: rgb(69,69,69);
 }
 .sub-content{
@@ -99,7 +97,6 @@ body{
 	max-width: 35%;
 	margin-top: -10px;
 	margin-left: 52px;
-	font-weight: bold;
 	color: rgb(69,69,69);
 }
 @media screen and (max-width:640px){
@@ -109,7 +106,6 @@ body{
 }
 /*input box styling*/
 .input-line{
-	font-weight: bold;
 	text-align: left;	
 	padding-left: 5px;
 	margin-bottom: 0px !important;
@@ -138,7 +134,6 @@ body{
 	padding-top: 18px;
 	padding-bottom: 2px;
 	padding-left: 35px;
-	font-weight: bold;
 	color: #00bcd4;
 }
 @media screen and (max-width: 640px){
@@ -155,7 +150,6 @@ body{
 .myBtn{
 	color: rgb(69,69,69);
 	background: rgb(255,235,60);
-	font-weight: bold;
 }
 .myBtn:hover{
 	background: rgba(255,235,60,0.7);
