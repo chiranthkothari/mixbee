@@ -154,3 +154,47 @@ body{
 .myBtn:hover{
 	background: rgba(255,235,60,0.7);
 }
+
+#dis-dep{
+	display: none;
+	transition: all 0.5s ease-in; 
+}
+table{
+	margin-top: 70px;
+    border: 1px solid black;
+}
+section#resultt{
+	background: rgb(230,230,230);
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	padding-bottom: 50px;
+}
+.containerr{
+	width: 80%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+/*Footer*/
+footer{
+	background: rgb(255,235,60);
+	color: black;
+	text-align: center;
+	margin: 0;
+}   
+footer a{
+	color: darkblue;
+	text-decoration: none;
+}
+footer a:hover{
+	color: darkblue;
+	text-decoration: none;
+}
+footer h6{
+	margin: 0;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
