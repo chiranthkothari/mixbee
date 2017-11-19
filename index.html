@@ -4,326 +4,84 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="assets/css/material.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.css">
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<title>MixBee- Online Concrete Mix design calculator</title>
+	<link rel="stylesheet" href="assets/css/style2.css">
+	<title>Mixbee- Online concrete mix design calculator</title>
 </head>
 <body>
-	<div id="main-container">
-		<div class="landing">
-			<div class="container">
-				<a href="#"><img src="assets/img/logo.png" class="logo"></a>
-				<ul class="menu">
-					<li>
-						<a href="#">HOME</a>
-					</li>
-					<li>
-						<a href="#">ABOUT</a>
-					</li>
-					<li>
-						<a href="#">CONTACT</a>
-					</li>
-				</ul>
-				<h4 class="cmd">CONCRETE MIX DESIGN</h4>
-				<h6 class="lineBelowCmd">(As per IS 10262-2009)</h6>
-			</div>
+	<section id="nav">
+		<div class="nav-container">
+			<img src="assets/img/logo.png" class="logo">
+			<ul class="menu">
+				<li>
+					<a href="#about">ABOUT</a>
+				</li>
+				<li>
+					<a href="app.html" class="gotoapp">GO TO APP</a>
+				</li>
+			</ul>
 		</div>
-		<div class="main-page">
-			<div class="container">
-				<div class="main-page-container">
-					<div class="top-line"></div>
-					<p class="content">1. Grade of Concrete</p>
-					<select class="select-option" id="grade_concrete" onchange="update()">
-						<option value="10">M10</option>
-						<option value="15">M15</option>
-						<option value="20">M20</option>
-						<option value="25">M25</option>
-						<option value="30">M30</option>
-						<option value="35">M35</option>
-						<option value="40">M40</option>
-						<option value="45">M45</option>
-					</select>
-					<p class="content">2. Type of cement</p>
-					<select class="select-option" onchange="update()">
-						<option value="">PPC</option>
-						<option value="">OPC 33</option>
-						<option value="">OPC 43</option>
-						<option value="">OPC 53</option>
-					</select>
-					<p class="content">3. Maximum nominal size of aggregates</p>
-					<select class="select-option" id="max_nominal" onchange="update()">
-						<option value="10">10 mm</option>
-						<option value="20">20 mm</option>
-						<option value="40">40 mm</option>
-					</select>
-					<p class="content">4. Workability (mm)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="workability" onclick="update()" value="100">
-						</div>
-					</div>
-					<p class="content">5. Type of concrete</p>
-					<select class="select-option" id="type_of_concrete" onchange="update()">
-						<option value="0">RCC</option>
-						<option value="1">PCC</option>
-					</select>
-					<p class="content">6. Exposure condition</p>
-					<select class="select-option" id="exposure_condition" onchange="update()">
-						<option value="0">Mild</option>
-						<option value="1">Moderate</option>
-						<option value="2">Severe</option>
-						<option value="3">Very severe</option>
-						<option value="4">Extreme</option>
-					</select>
-					<p class="content">7. Method of placing concrete</p>
-					<select class="select-option" id="method_placing" onchange="update()">
-						<option value="0">Pumping</option>
-						<option value="1">Automatic</option>
-					</select>
-					<p class="content">8. Degree of supervision</p>
-					<select class="select-option" id="degree_sup" onchange="update()">
-						<option value="1">Good</option>
-						<option value="2">Normal</option>
-					</select>
-					<p class="content">9. Type of coarse aggregates</p>
-					<select class="select-option" id="type_coarse" onchange="update()">
-						<option value="0">Angular</option>
-						<option value="1">Sub-angular</option>
-						<option value="2">Gravel with crushed particles</option>
-						<option value="3">Rounded gravel</option>
-					</select>
-					<p class="content">10.  Use Chemical admixture (Superplasticizer)</p>
-					<select class="select-option" onchange="update()" id="use_ca">
-						<option value="0">No</option>
-						<option value="1">Yes</option>
-					</select>
-					<div id="dis-dep">
-						<p class="content sub-content">Percentage reduction in water content</p>
-						<div class="row" style="margin-top: -10px;">
-							<div class="col l2 s4 leftMargin">
-								<input type="text" value=30 class="input-line" style="color: black;" id="per_red_water" onclick="update()">
-							</div>
-						</div>
-						<p class="content sub-content">Volume of chemical admixture (Percentage by  mass of cementicious material)</p>
-						<div class="row" style="margin-top: -10px;">
-							<div class="col l2 s4 leftMargin">
-								<input type="text" placeholder="Enter value" class="input-line" id="vol_admix" onclick="update()" value=0.8>
-							</div>
-						</div>
-						<p class="content sub-content">Specific gravity of chemical  admixture</p>
-						<div class="row" style="margin-top: -10px;">
-							<div class="col l2 s4 leftMargin">
-								<input type="text" placeholder="Enter value" class="input-line" onclick="update()" value=1.2 id="sgadmix">
-							</div>
-						</div>
-					</div>
-					<h6 class="mid-heads">Experimental Values</h6>
-					<p class="content">11. Specific gravity of cement</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" onclick="update()" value=3.15 id="sgcem">
-						</div>
-					</div>
-					<p class="content">12. Specific gravity of fine aggregates</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" onclick="update()" value=2.76 id="sgfa">
-						</div>
-					</div>
-					<p class="content">13. Specific gravity of coarse aggregates</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" onclick="update()" value=2.76 id="sgca">
-						</div>
-					</div>
-					<p class="content">14. Water absorption of fine Aggregates(%)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" onclick="update()" value=1.2>
-						</div>
-					</div>
-					<p class="content">15. Water absorption of coarse Aggregates(%)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" onclick="update()" value=1.01>
-						</div>
-					</div>
-					<h6 class="mid-heads">Target strength and water-cement ratio selection</h6>
-					<p class="content">16. Considered Standard Deviation</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="std_dev" onclick="update()">
-						</div>
-					</div>
-					<p class="content">17. Target avg. compressive strength at 28 days</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="target_comp" onclick="update()">
-						</div>
-					</div>
-					<p class="content">18. Maximum water cement ratio</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="max_wc" onclick="update()">
-						</div>
-					</div>
-					<p class="content">19. Adopt water cement ratio</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="adopt_wc" onclick="update()">
-						</div>
-					</div>
-					<h6 class="mid-heads">Water content calculation</h6>
-					<p class="content">20. Maximum water content (kg/m<sup>3</sup>)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="max_water" onclick="update()">
-						</div>
-					</div>
-					<p class="content">21. Reduction due to type of coarse aggregates (kg/m<sup>3</sup>)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="red_ca" onclick="update()">
-						</div>
-					</div>
-					<p class="content">22. Increament due to workability (kg/m<sup>3</sup>)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="increament_workability" onclick="update()">
-						</div>
-					</div>
-					<p class="content">23. Net water content (kg/m<sup>3</sup>)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="net_water" onclick="update()">
-						</div>
-					</div>
-					<p class="content">24. Resulting WC after Reduction due to admixture (kg/m<sup>3</sup>)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="resulting_wc" onclick="update()">
-						</div>
-					</div>
-					<h6 class="mid-heads">Cement content calculation</h6>
-					<p class="content">25. Cement content as per w/c ratio(kg/m<sup>3</sup>)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="cc_wc" onclick="update()">
-						</div>
-					</div>
-					<p class="content">26. Minimum Cement content as per IS 456 (kg/m<sup>3</sup>)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="min_cement" onclick="update()">
-						</div>
-					</div>
-					<p class="content">27. Cement content (kg/m<sup>3</sup>)</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="cem_con" onclick="update()">
-						</div>
-					</div>
-					<h6 class="mid-heads">Proportioning coarse aggregates</h6>
-					<p class="content">28. Zone of fine aggregates</p>
-					<select class="select-option" id="zone" onchange="update()">
-						<option value="0">Zone I</option>
-						<option value="1">Zone II</option>
-						<option value="2">Zone III</option>
-						<option value="3">Zone IV</option>
-					</select>
-					<p class="content">29. Volume of coarse aggregates per unit total aggregates</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="vol_ca_total_agg" onclick="update()">
-						</div>
-					</div>
-					<p class="content">30. Volume change due to workability</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="ca_vol_change_workability" onclick="update()">
-						</div>
-					</div>
-					<p class="content">31. Max. reduction in CA (%) due to pumpable concrete</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="max_red_pump" onclick="update()">
-						</div>
-					</div>
-					<p class="content">32. Volume of coarse aggregates</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="vca" onclick="update()">
-						</div>
-					</div>
-					<p class="content">33. Volume of fine aggregates</p>
-					<div class="row" style="margin-top: -10px;">
-						<div class="col l2 s4 leftMargin">
-							<input type="text" placeholder="Enter value" class="input-line" id="vfa" onclick="update()">
-						</div>
-					</div>
-					<div class="customBtn">
-						<a class="waves-effect waves-light btn myBtn" onclick="mixbee()" href="#resultt">CALCULATE</a>
-					</div>
+	</section>
+	<section id="yellow-section" style="text-align: center;">
+		<div class="container">
+			<div class="main-container">
+				<div class="vertical-align">
+					<img src="assets/img/hero.png" class="hero">
 				</div>
 			</div>
 		</div>
-	</div>
-	<section id="resultt">
-		<div class="containerr">
-			<h4 style="padding-top: 20px; margin: 2px;">RESULTS</h4>
-			<div style="overflow-x:auto;">
-				<table id="results_table">
-					<thead>
-						<tr>
-							<th>Material</th>
-							<th>Quantity (kg/m<sup>3</sup>)</th>
-							<th>Volume (m<sup>3</sup>)</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th>Cement</th>
-							<th>-</th>
-							<th>-</th>
-						</tr>
-						<tr>
-							<th>Water</th>
-							<th>-</th>
-							<th>-</th>
-						</tr>
-						<tr>
-							<th>Fine aggregates</th>
-							<th>-</th>
-							<th>-</th>
-						</tr>
-						<tr>
-							<th>Coarse aggregates</th>
-							<th>-</th>
-							<th>-</th>
-						</tr>
-						<tr>
-							<th>Chemical Admixtures</th>
-							<th>-</th>
-							<th>-</th>
-						</tr>
-						<tr>
-							<th>Water-Cement ratio</th>
-							<th>-</th>
-							<th>-</th>
-						</tr>
-					</tbody>
-				</table>
+	</section>
+	<section id="about">
+		<h4>About mixbee</h4><hr>
+		<h5>Mixbee is an online concrete mix design calculator based on <span class="highlight">IS 10262.</span></h5>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<img src="assets/img/receipt.svg" class="icons">
+					<h4 class="caption">ECONOMIC DESIGN</h4>
+				</div>
+				<div class="col-md-4">
+					<img src="assets/img/rewind-time.svg" class="icons">
+					<h4 class="caption">EXPEDITIOUS</h4>
+				</div>
+				<div class="col-md-4">
+					<img src="assets/img/pie-chart.svg" class="icons">
+					<h4 class="caption">USER FRIENDLY</h4>
+				</div>
 			</div>
 		</div>
 	</section>
-
 	<footer>
-		<h6>Coded by <a href="http://bit.ly/chiranth" target="_blank">Chiranth</a>| Powered by <a href="http://idevia.in" target="_blank">iDevia</a></h6>
-	</footer>	
+		<h6>Coded by <a href="http://bit.ly/chiranth" target="_blank">Chiranth </a>| Powered by <a href="http://idevia.in" target="_blank">iDevia</a></h6>
+	</footer>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109850495-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/materialize.min.js"></script>
-	<script src="assets/js/app.js"></script>
+		gtag('config', 'UA-109850495-1');
+	</script>
+
 </body>
 </html>
